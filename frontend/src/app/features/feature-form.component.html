@@ -1,0 +1,35 @@
+<h1 mat-dialog-title *ngIf="data.new">New Feature Toggle</h1>
+<h1 mat-dialog-title *ngIf="data.edit">Edit Feature Toggle</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Display Name</mat-label>
+    <input matInput [formControl]="displayName">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Technical Name</mat-label>
+    <input matInput [formControl]="technicalName" required>
+    <mat-error *ngIf="technicalName.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [formControl]="description">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Expires On</mat-label>
+    <input matInput [matDatepicker]="expiresOnDate" [formControl]="expiresOn">
+    <mat-datepicker-toggle matSuffix [for]="expiresOnDate"></mat-datepicker-toggle>
+    <mat-datepicker #expiresOnDate></mat-datepicker>
+  </mat-form-field>
+
+    <mat-radio-group [formControl]="inverted">
+        <mat-radio-button value="true">Inverted</mat-radio-button>
+        <mat-radio-button value="false">Not Inverted</mat-radio-button>
+    </mat-radio-group>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="true" color="primary" (click)="onOK()">OK</button>
+</div>

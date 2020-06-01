@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Archive Feature Toggle</h1>
+<div mat-dialog-content>
+    <span *ngIf="data.archive">Archive</span>
+    <span *ngIf="!data.archive">Unarchive</span>
+    feature toggle: {{data.feature.technicalName}}
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="onOK(data.archive)">OK</button>
+</div>
