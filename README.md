@@ -2,9 +2,12 @@ This project includes backend and frontend seperately. Please refer README files
 
 For building the whole application;
 
-- First build frontend through Angular CLI;
+- First install and build frontend;
 ```
 ~$ cd frontend
+
+~$ npm install
+
 ~$ ng build --prod
 ```
 
@@ -12,5 +15,6 @@ For building the whole application;
 -Then start the backend application through Gradle;
 ```
 ~$ cd backend
+
 ~$ gradle bootRun
 ```

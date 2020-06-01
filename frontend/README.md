@@ -13,10 +13,12 @@ This project contains a Single Page Web application featuring Feature Toggles.
 ## Building the application
 
 ```
+~$ npm install
+
 ~$ ng build --prod
 ```
-*Resources are going to be built into backend web app.
-*Please start the backend application after build to start using the application.
+- Resources are going to be built into backend web app.
+- Please start the backend application after build to start using the application.
 
 ## Unit testing
 
