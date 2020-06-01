@@ -5,6 +5,7 @@ Here we have got a Spring Boot web application featuring Feature Toggles.
 ### Technologies Involved
 
 - Spring Boot as RESTful Backend Web Framework
+- Gradle as build tool. (Requires 6.3 or later.)
 - JUnit for unit testing
 - Mockito for mocking in tests
 
