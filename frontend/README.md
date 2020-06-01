@@ -18,7 +18,7 @@ This project contains a Single Page Web application featuring Feature Toggles.
 ~$ ng build --prod
 ```
 - Resources are going to be built into backend web app.
-- Please start the backend application after build to start using the application.
+- Please build frontend first to start using the application.
 
 ## Unit testing
 
